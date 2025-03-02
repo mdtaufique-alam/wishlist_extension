@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Universal Wishlist Extension",
+  "version": "1.0",
+  "description": "Automatically adds product pages to your wishlist aggregator.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "*://www.flipkart.com/*",
+    "*://www.amazon.in/*",
+    "*://www.myntra.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.flipkart.com/*",
+        "*://www.amazon.in/*",
+        "*://www.myntra.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
