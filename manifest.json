@@ -1,23 +1,25 @@
 {
   "manifest_version": 3,
-  "name": "Universal Wishlist Extension",
+  "name": "Wishlist Adder",
   "version": "1.0",
-  "description": "Automatically adds product pages to your wishlist aggregator.",
-  "permissions": ["activeTab", "scripting", "storage"],
-  "host_permissions": [
-    "*://www.flipkart.com/*",
-    "*://www.amazon.in/*",
-    "*://www.myntra.com/*"
-  ],
+  "description": "Save products from any site to your wishlist",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["*://*.flipkart.com/*", "*://*.amazon.in/*", "https://wishlist-extension.vercel.app/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
   "content_scripts": [
     {
-      "matches": [
-        "*://www.flipkart.com/*",
-        "*://www.amazon.in/*",
-        "*://www.myntra.com/*"
-      ],
-      "js": ["content.js"],
-      "run_at": "document_end"
+      "matches": ["*://*.flipkart.com/*", "*://*.amazon.in/*"],
+      "js": ["content.js"]
     }
   ]
 }
