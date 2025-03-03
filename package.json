@@ -1,0 +1,24 @@
+{
+  "name": "wishlist-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdtaufique-alam/wishlist_extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mdtaufique-alam/wishlist_extension/issues"
+  },
+  "homepage": "https://github.com/mdtaufique-alam/wishlist_extension#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1"
+  }
+}
