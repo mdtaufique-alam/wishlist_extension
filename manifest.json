@@ -4,16 +4,17 @@
   "version": "1.0",
   "description": "Save products from any site to your wishlist",
   "permissions": ["activeTab", "storage", "scripting"],
-  "host_permissions": ["*://*.flipkart.com/*", "*://*.amazon.in/*", "https://wishlist-extension.vercel.app/*"],
+  "host_permissions": ["https://wishlist-extension.vercel.app/*"],
+  "optional_host_permissions": ["*://*.flipkart.com/*", "*://*.amazon.in/*"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html",
+    
     "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
     }
   },
   "content_scripts": [
